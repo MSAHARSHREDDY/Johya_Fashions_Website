@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FCF8F3;
+  --color-beige: #F2EBE1;
+  --color-gold: #C5A021;
+  --color-champagne: #F9EBD7;
+  --color-charcoal: #121212;
+  --color-pearl: #FEFDFB;
+  --color-silk: #FDF8F3;
+}
+
+@layer base {
+  body {
+    @apply bg-silk text-charcoal font-sans antialiased min-h-screen selection:bg-gold/20 selection:text-gold;
+    background: linear-gradient(135deg, #FFFCF9 0%, #F7F3F0 100%);
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+  
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+}

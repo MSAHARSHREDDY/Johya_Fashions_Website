@@ -1,0 +1,8 @@
+{
+  "name": "Johya Fashions",
+  "description": "A premium fashion brand website showcasing elegant collections for Women, Men, and Kids.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
