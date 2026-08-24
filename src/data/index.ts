@@ -569,7 +569,8 @@ export const contactInfo: ContactInfo = {
   brand: 'JOHYA FASHIONS',
   tagline: 'Fashion For Every Generation',
   email: 'hello@johyafashions.com',
-  phone: '+91 (800) 123-4567',
+  phone: '8897464497',
+  address: 'Mallampet, Hyderabad',
   socials: {
     instagram: '#',
     facebook: '#',
@@ -580,6 +581,6 @@ export const contactInfo: ContactInfo = {
 export const heroData = {
   title: 'FASHION FOR EVERY GENERATION',
   subtitle: 'Discover timeless styles for women, men and kids.',
-  image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=1600',
+  image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=1600',
   cta: 'EXPLORE PRODUCTS',
 };

@@ -42,6 +42,7 @@ export interface ContactInfo {
   tagline: string;
   email: string;
   phone: string;
+  address: string;
   socials: {
     instagram: string;
     facebook: string;

@@ -31,6 +31,7 @@ export default function Footer() {
           <div className="space-y-6">
             <h4 className="text-sm font-semibold uppercase tracking-widest">Contact</h4>
             <div className="text-white/60 space-y-4 text-sm">
+              <p>{contactInfo.address}</p>
               <p>{contactInfo.phone}</p>
               <p>{contactInfo.email}</p>
             </div>

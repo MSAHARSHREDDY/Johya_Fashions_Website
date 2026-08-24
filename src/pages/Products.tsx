@@ -47,11 +47,11 @@ export default function Products() {
         {/* Toolbar */}
         <div className="flex flex-col md:flex-row gap-6 mb-12 items-center justify-between">
           {/* Category Tabs */}
-          <div className="flex items-center space-x-2 overflow-x-auto pb-2 w-full md:w-auto no-scrollbar">
+          <div className="flex flex-wrap gap-3 w-full md:w-auto">
             <button
               onClick={() => setSearchParams({ category: 'all' })}
               className={cn(
-                "px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all whitespace-nowrap",
+                "px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all",
                 activeCategory === 'all' ? "bg-charcoal text-white" : "bg-white text-charcoal/40 hover:text-charcoal"
               )}
             >
@@ -62,7 +62,7 @@ export default function Products() {
                 key={cat.id}
                 onClick={() => setSearchParams({ category: cat.id })}
                 className={cn(
-                  "px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all whitespace-nowrap",
+                  "px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all",
                   activeCategory === cat.id ? "bg-charcoal text-white" : "bg-white text-charcoal/40 hover:text-charcoal"
                 )}
               >

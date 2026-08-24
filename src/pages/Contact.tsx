@@ -55,7 +55,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-xs font-bold uppercase tracking-widest text-charcoal/40 mb-2">Boutique Location</h3>
                   <p className="text-xl font-medium">
-                    123 Luxury Avenue, Fashion District, New Delhi, India
+                    {contactInfo.address}
                   </p>
                 </div>
               </div>
