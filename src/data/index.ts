@@ -568,8 +568,8 @@ export const gallery: GalleryItem[] = [
 export const contactInfo: ContactInfo = {
   brand: 'JOHYA FASHIONS',
   tagline: 'Fashion For Every Generation',
-  email: 'hello@johyafashions.com',
-  phone: '8897464497',
+  email: 'johyafashions@gmail.com',
+  phone: '6301071131',
   address: 'Mallampet, Hyderabad',
   socials: {
     instagram: '#',
