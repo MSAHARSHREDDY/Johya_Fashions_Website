@@ -97,7 +97,7 @@ export default function Products() {
         </div>
 
         {/* Product Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
           <AnimatePresence mode="popLayout">
             {filteredProducts.map((product) => (
               <motion.div
@@ -108,15 +108,15 @@ export default function Products() {
                 key={product.id}
               >
                 <div className="group block">
-                  <div className="relative aspect-[3/4] overflow-hidden mb-6 bg-beige/50">
+                  <div className="relative aspect-[3/4] overflow-hidden mb-3 md:mb-6 bg-beige/50">
                     <img
                       src={product.images[0]}
                       alt={product.name}
                       className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
-                  <h3 className="text-sm font-semibold uppercase tracking-widest mb-1 group-hover:text-gold transition-colors">{product.name}</h3>
-                  <p className="text-xs text-charcoal/40 uppercase tracking-wider mb-2">{product.subcategory}</p>
+                  <h3 className="text-xs md:text-sm font-semibold uppercase tracking-widest mb-1 group-hover:text-gold transition-colors line-clamp-1">{product.name}</h3>
+                  <p className="text-[10px] md:text-xs text-charcoal/40 uppercase tracking-wider mb-2">{product.subcategory}</p>
                 </div>
               </motion.div>
             ))}
