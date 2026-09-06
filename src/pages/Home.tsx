@@ -75,7 +75,7 @@ export default function Home() {
       {/* Category Showcase */}
       <section className="py-10 bg-beige/30">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
             {categories.map((category, index) => (
               <motion.div
                 key={category.id}
@@ -83,7 +83,7 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="group relative h-[500px] overflow-hidden cursor-pointer"
+                className="group relative h-[250px] md:h-[400px] lg:h-[500px] overflow-hidden cursor-pointer"
               >
                 <Link to={`/products?category=${category.id}`}>
                   <img
@@ -92,12 +92,12 @@ export default function Home() {
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity" />
-                  <div className="absolute inset-0 flex flex-col justify-end p-8 text-white">
-                    <h3 className="text-3xl font-bold mb-2 tracking-tighter">{category.name}</h3>
-                    <p className="text-white/70 text-sm mb-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+                  <div className="absolute inset-0 flex flex-col justify-end p-4 md:p-8 text-white">
+                    <h3 className="text-xl md:text-3xl font-bold mb-1 md:mb-2 tracking-tighter">{category.name}</h3>
+                    <p className="hidden md:block text-white/70 text-sm mb-4 transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
                       {category.description}
                     </p>
-                    <span className="text-xs font-bold tracking-[0.2em] uppercase border-b border-white/40 pb-1 w-fit group-hover:border-white transition-colors">
+                    <span className="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase border-b border-white/40 pb-1 w-fit group-hover:border-white transition-colors">
                       Explore {category.name}
                     </span>
                   </div>

@@ -51,7 +51,7 @@ export default function Products() {
             <button
               onClick={() => setSearchParams({ category: 'all' })}
               className={cn(
-                "px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all",
+                "px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all cursor-pointer",
                 activeCategory === 'all' ? "bg-charcoal text-white" : "bg-white text-charcoal/40 hover:text-charcoal"
               )}
             >
@@ -62,7 +62,7 @@ export default function Products() {
                 key={cat.id}
                 onClick={() => setSearchParams({ category: cat.id })}
                 className={cn(
-                  "px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all",
+                  "px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all cursor-pointer",
                   activeCategory === cat.id ? "bg-charcoal text-white" : "bg-white text-charcoal/40 hover:text-charcoal"
                 )}
               >
