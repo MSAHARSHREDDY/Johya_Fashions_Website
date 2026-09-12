@@ -35,12 +35,9 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <Link 
           to="/" 
-          className={cn(
-            'text-2xl font-bold tracking-tighter transition-colors',
-            isScrolledOrNotHome ? 'text-gold' : 'text-white'
-          )}
+          className="flex items-center"
         >
-          {contactInfo.brand}
+          <img src="/logo.png" alt={contactInfo.brand} className="h-12 md:h-14 w-auto rounded-full shadow-lg" />
         </Link>
 
         {/* Desktop Nav */}

@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold tracking-tighter">{contactInfo.brand}</h3>
+            <img src="/logo.png" alt={contactInfo.brand} className="h-20 w-auto rounded-full shadow-lg" />
             <p className="text-white/60 max-w-xs leading-relaxed">
               {contactInfo.tagline}. Timeless elegance for the modern family.
             </p>

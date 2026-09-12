@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { heroData, categories, products } from '../data';
 import { ArrowRight } from 'lucide-react';
 
@@ -8,6 +9,11 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
+      <Helmet>
+        <title>Johya Fashions | Family Clothing Store in Mallampet, Hyderabad</title>
+        <meta name="description" content="Shop stylish fashion for women, men and kids at Johya Fashions, a family clothing store in Mallampet, Hyderabad. Discover timeless and ethnic wear." />
+        <link rel="canonical" href="https://www.johyafashions.in/" />
+      </Helmet>
       {/* Hero Section */}
       <section className="relative h-[85vh] md:h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">

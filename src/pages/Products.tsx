@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { products, categories } from '../data';
 import { Search, Filter, ChevronDown, SlidersHorizontal } from 'lucide-react';
 import { cn } from '../lib/utils';
@@ -12,6 +13,10 @@ export default function Products() {
   const [showFilters, setShowFilters] = useState(false);
 
   const activeCategory = searchParams.get('category') || 'all';
+
+  const categoryName = activeCategory !== 'all' 
+    ? categories.find(c => c.id === activeCategory)?.name || 'Products'
+    : 'All Collections';
 
   const filteredProducts = useMemo(() => {
     let result = [...products];
@@ -36,6 +41,11 @@ export default function Products() {
 
   return (
     <div className="pt-32 pb-20 bg-cream min-h-screen">
+      <Helmet>
+        <title>{categoryName} | Johya Fashions</title>
+        <meta name="description" content={`Browse our latest ${categoryName.toLowerCase()} collection. Johya Fashions offers stylish, high-quality family clothing in Mallampet, Hyderabad.`} />
+        <link rel="canonical" href={`https://www.johyafashions.in/products${activeCategory !== 'all' ? `?category=${activeCategory}` : ''}`} />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-6">
         <header className="mb-12">
           <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4">Our Collections</h1>

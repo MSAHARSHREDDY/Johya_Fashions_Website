@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Helmet } from 'react-helmet-async';
 import { contactInfo } from '../data';
 import { Mail, Phone, MapPin, Send, Instagram, Facebook, Twitter } from 'lucide-react';
 import { useState, FormEvent } from 'react';
@@ -14,6 +15,11 @@ export default function Contact() {
 
   return (
     <div className="pt-32 pb-20 bg-cream min-h-screen">
+      <Helmet>
+        <title>Contact Johya Fashions | Mallampet</title>
+        <meta name="description" content="Get in touch with Johya Fashions in Mallampet, Hyderabad. Contact us for inquiries about our latest collections, ethnic wear, and family fashion." />
+        <link rel="canonical" href="https://www.johyafashions.in/contact" />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-6">
         <header className="mb-16">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6">Let's Connect</h1>
